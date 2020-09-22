@@ -7,4 +7,19 @@ public class Crew {
     private String name;
     private long employeeID;
 
+
+    public void checkInLuggage() {
+
+    }
+    public void requestPaymentLuggage() {
+
+
+    }
+    public int getCostLuggage() {
+        int luggageCost = 0;
+
+        return luggageCost;
+    }
 }
+
+
