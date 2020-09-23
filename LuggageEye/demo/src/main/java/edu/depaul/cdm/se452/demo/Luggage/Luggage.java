@@ -17,7 +17,7 @@ public class Luggage {
     public long createLuggageID() {
         long id = 0;
 
-        return long;
+        return id;
 
     }
 
