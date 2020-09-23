@@ -10,7 +10,6 @@ public class Airport {
     private int portNumber;
     private String city;
     private String state;
-    private String company;
 
     public List<String> getFlightList() {
         List<String> res = new ArrayList<>();
@@ -18,6 +17,7 @@ public class Airport {
         return res;
     
     }
+
 }
 
 

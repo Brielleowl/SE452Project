@@ -17,7 +17,6 @@ public class Flight {
 
     public List<Long> maintainLuggageList() {
         List<Long> res = new ArrayList<>();
-        
 
 
         return res;

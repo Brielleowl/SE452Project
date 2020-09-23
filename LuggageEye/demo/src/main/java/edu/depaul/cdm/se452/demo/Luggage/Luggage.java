@@ -9,9 +9,9 @@ public class Luggage {
     private int maxWeight;
     private String status;
     private int cost;
+    private int confimationNumber;
+
     public void makePayment() {
-
-
     }
 
     public long createLuggageID() {
@@ -21,8 +21,8 @@ public class Luggage {
 
     }
 
-    public int calculateAmount(int weight, float price) {
-        int amount = weight * price;
+    public float calculateAmount(int weight, float price) {
+        float amount = weight * price;
         
         return amount;
 
