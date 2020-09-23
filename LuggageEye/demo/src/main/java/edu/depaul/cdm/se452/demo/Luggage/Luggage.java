@@ -15,13 +15,16 @@ public class Luggage {
     }
 
     public long createLuggageID() {
+        long id = 0;
 
+        return long;
 
     }
 
     public int calculateAmount() {
+        int amount = 0;
+        return amount;
 
-        
     }
 
 
