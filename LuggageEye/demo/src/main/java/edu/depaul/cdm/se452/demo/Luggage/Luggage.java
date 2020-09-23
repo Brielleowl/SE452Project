@@ -21,8 +21,8 @@ public class Luggage {
 
     }
 
-    public int calculateAmount(int weight, float price) {
-        int amount = weight * price;
+    public float calculateAmount(int weight, float price) {
+        float amount = weight * price;
         
         return amount;
 
