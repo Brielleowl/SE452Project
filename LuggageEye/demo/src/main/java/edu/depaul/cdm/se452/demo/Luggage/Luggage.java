@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class Luggage {
     private long luggageID;
-    private int allowance;
+    private int weight;
     private int maxWeight;
     private String status;
-
+    private int cost;
     public void makePayment() {
 
 
@@ -21,8 +21,9 @@ public class Luggage {
 
     }
 
-    public int calculateAmount() {
-        int amount = 0;
+    public int calculateAmount(int weight, float price) {
+        int amount = weight * price;
+        
         return amount;
 
     }

@@ -25,12 +25,6 @@ public class Passenger {
 
     }
 
-    public long createLuggageID() {
-        long luggageId = 0;
-
-        return luggageId;
-    }
-
     
 
 
