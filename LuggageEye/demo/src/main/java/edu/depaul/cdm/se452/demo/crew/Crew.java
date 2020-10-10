@@ -16,14 +16,14 @@ public class Crew {
     public void requestPaymentLuggage() {
     }
 
-    public int getCostLuggage(Luggage l) {
-        return l.getCost();
-    }
+    // public int getCostLuggage(Luggage l) {
+    //     return l.getCost();
+    // }
 
-    public void checkinLuggage(Luggage luggage) {
-        int n = 10000 + new Random().nextInt(90000);
-        luggage.setConfimationNumber(n);
-    }
+    // public void checkinLuggage(Luggage luggage) {
+    //     int n = 10000 + new Random().nextInt(90000);
+    //     luggage.setConfimationNumber(n);
+    // }
 }
 
 
