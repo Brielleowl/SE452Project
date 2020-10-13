@@ -18,3 +18,9 @@ CREATE TABLE luggage (
     PRIMARY KEY (ID)
 );
 
+
+CREATE TABLE Ticket (
+    ticketID int,
+    
+
+)

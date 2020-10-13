@@ -1,4 +1,4 @@
-package edu.depaul.cdm.se452.demo.Luggage;
+package edu.depaul.cdm.se452.demo.luggage;
 
 import javax.persistence.Entity;
 

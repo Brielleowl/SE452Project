@@ -1,9 +1,10 @@
 package edu.depaul.cdm.se452.demo.crew;
 
 import lombok.Data;
-import edu.depaul.cdm.se452.demo.Luggage.Luggage;
 
 import java.util.Random;
+
+import edu.depaul.cdm.se452.demo.luggage.Luggage;
 
 @Data
 public class Crew {
