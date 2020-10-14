@@ -13,6 +13,8 @@ import org.springframework.context.annotation.Bean;
 import db.nosql.paymentRecord.PaymentRecord;
 import db.nosql.paymentRecord.PaymentRecordRepository;
 import db.nosql.VIPpassenger.VIPpassenger;
+import db.nosql.VIPpassenger.VIPpassengerRepository;
+import db.nosql.luggageCheckIn.LuggageCheckIn;
 import db.nosql.luggageStatusRecord.LuggagestatusRecord;
 
 
@@ -63,6 +65,17 @@ public class Main {
               LuggagestatusRecord status3 = new LuggagestatusRecord();
               status3.setPassengerID(45623);
               status3.setStatus("Scanned");
+
+              LuggageCheckIn luggageChech1 = new LuggageCheckIn();
+              luggageChech1.setCheckInDate(20200506);
+              luggageChech1.setCheckInID(25642);
+              luggageChech1.setPassengerName("Brielle");
+
+              LuggageCheckIn luggageChech2 = new LuggageCheckIn();
+              luggageChech2.setCheckInDate(20191208);
+              luggageChech2.setCheckInID(98231);
+              luggageChech2.setPassengerName("John");
+
       
       
           };
@@ -81,5 +94,19 @@ public class Main {
           };
       
       }
+      @Bean
+      public CommandLineRunner showVIP(VIPpassengerRepository repository) {
+
+        
+        return (args)->{
+            List<VIPpassenger> VIPpassengerRecord = repository.findAll();
+            for(VIPpassenger record : VIPpassengerRecord) {
+                log.info("start to find all data");
+                log.info(record.toString());
+    
+            }
+        };
+    
+    }
 }
 

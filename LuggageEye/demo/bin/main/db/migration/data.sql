@@ -1,10 +1,11 @@
 INSERT INTO passenger(id, name) VALUES
-            (12345, 'Mike'),
-            (67890, 'Sarah');
+            (000001, 'Sadaf'),
+            (000002, 'Shirley');
 
-INSERT INTO luggage(id) VALUES
-            (000001),
-            (000002);
+
+
+INSERT INTO luggage(id, passenger_id, weight, status, confirmation_number) VALUES
+            (123, 12345, 10, 'In Transit', 123457890);
 
 INSERT INTO Ticket(ticketID,luggageID,passengerID) VALUES
         (000001,000001,0000001),
