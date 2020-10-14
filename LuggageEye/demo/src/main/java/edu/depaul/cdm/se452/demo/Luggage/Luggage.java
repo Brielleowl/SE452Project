@@ -1,48 +1,37 @@
 package edu.depaul.cdm.se452.demo.luggage;
 
 import javax.persistence.Entity;
-
 import lombok.Data;
-
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.persistence.*;
 
+@Data
 @Entity
-@Table(name = "Luggage")
+@Table(name="LUGGAGE")
 public class Luggage {
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @NotBlank
-    @Column(name = "luggageID")
-    private long luggageID;
-    @Size(min = 5, max = 5)
-    private int weight;
+    private long id;
 
-    
-    private int maxWeight;
+    private int passengerID;
+
+    private double weight;
+
     private String status;
-    private int cost;
-    private int confimationNumber;
+
+    private int confirmationNumber;
 
     public void makePayment() {
     }
 
-    public long createLuggageID() {
-        long id = 0;
-
-        return id;
-
+    public void createLuggageID() {
+        long number = (long) Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L;
+        this.id = number;
     }
 
     public float calculateAmount(int weight, float price) {
         float amount = weight * price;
-        
         return amount;
-
     }
 
 

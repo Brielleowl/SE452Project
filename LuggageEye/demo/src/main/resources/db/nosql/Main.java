@@ -33,19 +33,22 @@ public class Main {
               payment1.setPaymentID(0325567);
       
               PaymentRecord payment2 = new PaymentRecord();
-              payment1.setAmount(50.62);
-              payment1.setPassengerName("Mike");
-              payment1.setPaymentDate(new Date());
-              payment1.setPaymentID(364785);
+              payment2.setAmount(50.62);
+              payment2.setPassengerName("Mike");
+              payment2.setPaymentDate(new Date());
+              payment2.setPaymentID(364785);
       
       
           };
       }
       @Bean
       public CommandLineRunner showPayment(PaymentRecordRepository repository) {
+
+        
           return (args)->{
-              List<PaymentRecord> listofPayment = repository.findAll();
-              for(PaymentRecord pr : listofPayment) {
+              List<PaymentRecord> paymentRecord = repository.findAll();
+              for(PaymentRecord pr : paymentRecord) {
+                  log.info("start to find all data");
                   log.info(pr.toString());
       
               }

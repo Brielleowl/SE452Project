@@ -1,34 +1,27 @@
 package edu.depaul.cdm.se452.demo.passenger;
 
-import edu.depaul.cdm.se452.demo.luggage.Luggage;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import javax.persistence.*;
+import javax.validation.constraints.Size;
+
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
+@Table(name="PASSENGER")
 public class Passenger {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    
+
+    @Size(min = 3, max = 25)
     private String name;
-    private String level;
-    private Luggage luggage;
 
     public void selfCheckIn(){
-
     }
 
     public void payForLuggage() {
-
-
     }
 
-    
-
-
-    
 }
 
 

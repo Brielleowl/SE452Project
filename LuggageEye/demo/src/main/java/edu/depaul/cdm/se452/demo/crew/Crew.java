@@ -24,7 +24,7 @@ public class Crew {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "CrewID")
     private long employeeID;
-
+    
     public void checkInLuggage() {
     }
 
