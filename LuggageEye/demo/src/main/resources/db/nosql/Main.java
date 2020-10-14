@@ -18,7 +18,7 @@ import db.nosql.paymentRecord.PaymentRecordRepository;
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
-      }
+    }
       private static final Logger log = LoggerFactory.getLogger(Main.class);
 
 
@@ -49,7 +49,7 @@ public class Main {
                   log.info(pr.toString());
       
               }
-          }
+          };
       
       }
 }

@@ -24,7 +24,7 @@ Insert Into Airlines(AirlineID, AirlineName) VALUES
             (123456,"United"),
             (123457,"American");
             
-Insert Into Flight (FlightId, FlightNum, AirlineID, PlaneModel)
-            (123415, 41253,34245,"AB123"),
-            (123415, 44253,54345,"AC126");
+Insert Into Flight (FlightId, FlightNum, AirlineID, PlaneModel) VALUES
+            (123431,41253,34245,"AB123"),
+            (123415,44253,54345,"AC126");
             
