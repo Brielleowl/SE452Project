@@ -1,6 +1,8 @@
-package edu.depaul.cdm.se452.demo.passenger;
-import org.springframework.data.repository.CrudRepository;
+// package edu.depaul.cdm.se452.demo.passenger;
 
-public interface PassengerRepository extends CrudRepository<Passenger,Long>{
-    Passenger findByName(String name);
-;}
+// import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.data.repository.CrudRepository;
+
+// public interface PassengerRepository extends JpaRepository<Passenger,Long>{
+//     Passenger findByName(String name);
+// ;}

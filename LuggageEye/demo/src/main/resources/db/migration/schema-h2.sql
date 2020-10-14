@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS luggage;
 DROP TABLE IF EXISTS Airlines;
 Drop TABLE IF EXISTS FLIGHT;
+DROP TABLE IF EXISTS ticket;
 CREATE SEQUENCE hibernate_sequence START WITH 100 INCREMENT BY 1;
 
 CREATE TABLE passenger (
@@ -11,10 +12,9 @@ CREATE TABLE passenger (
 
 CREATE TABLE luggage (
     id int,
+    passenger_id int,
     weight int,
-    maxWeight int,
     status VARCHAR(10),
-    cost int,
     confirmation_number int,
     PRIMARY KEY (ID)
 );

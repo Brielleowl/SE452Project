@@ -21,4 +21,4 @@ services:
             - "~/mongo/data:/data/db"
         restart: always
         ports:
-            - 27017:27017
+            - 45014:65150

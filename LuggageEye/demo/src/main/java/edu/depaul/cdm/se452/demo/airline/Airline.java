@@ -20,7 +20,7 @@ public class Airline {
     @Column(name = "AirlineID")
     private int airlineID;
     private String airlinename;
-    @OneToMany(mappedBy = "flightID")
+    // @OneToMany(mappedBy = "flightID")
     private List<Flight> flightList;
 
 
