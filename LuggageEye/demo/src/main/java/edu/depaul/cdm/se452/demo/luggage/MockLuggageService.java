@@ -8,9 +8,10 @@ import java.util.UUID;
 import java.util.stream.Stream;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-
+import org.springframework.stereotype.Service;
+@Service
 @ConditionalOnProperty(name = "datasource", havingValue = "mock")
-public class MockLuggageService {
+public class MockLuggageService implements ILuggageService{
     private static List<Luggage> LUGGAGES = new ArrayList<>();
     static Random random = new Random();
     static{
@@ -26,9 +27,11 @@ public class MockLuggageService {
                 
             });
     }
+    @Override
     public List<Luggage> findAll() {
         return LUGGAGES;
     }
+    @Override
     public Luggage update(Luggage luggage) {
         Luggage originLuggage = findById(luggage.getId());
         LUGGAGES.remove(originLuggage);
@@ -36,7 +39,7 @@ public class MockLuggageService {
 
         return luggage;
     }
-
+    @Override
     public Luggage findById(long luggageId) {
         for (Luggage luggage : LUGGAGES) {
             if (luggage.getId() == luggageId) {
@@ -45,16 +48,8 @@ public class MockLuggageService {
         }
         return null;
     }
-    public Luggage findByPassengerId(long passengerId) {
-        for (Luggage luggage : LUGGAGES) {
-            if (luggage.getPassengerID() == passengerId) {
-                return luggage;
-            }
-        }
-        return null;
 
-    }
-
+    @Override
     public void deleteById(long luggageId) {
         LUGGAGES.remove(findById(luggageId));
     }

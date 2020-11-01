@@ -1,11 +1,258 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-    <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <title>Login</title>
-        
-    </head>
-   <a href="signup.html">  signup</a>
-    
+<html>
+<head>
+<title>Luggage Eye Home Page</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+
+
+
+
+<body>
+<!-- header -->
+	<div class="agileits_header">
+		<div class="w3l_header_right">
+			<ul>
+				<li class="dropdown profile_details_drop">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+					<div class="mega-dropdown-menu">
+						<div class="w3ls_vegetables">
+							<ul class="dropdown-menu drp-mnu">
+								<li><a href="login.html">Login</a></li>
+								<li><a href="login.html">Sign Up</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<style>  h1 {color:green;} </style>
+	<h1 style="text-align:center">Luggage Eye </h1>
+		<div class="clearfix"> </div>
+	</div>
+<!-- script-for sticky-nav -->
+	<script>
+	$(document).ready(function() {
+		 var navoffeset=$(".agileits_header").offset().top;
+		 $(window).scroll(function(){
+			var scrollpos=$(window).scrollTop();
+			if(scrollpos >=navoffeset){
+				$(".agileits_header").addClass("fixed");
+			}else{
+				$(".agileits_header").removeClass("fixed");
+			}
+		 });
+
+	});
+	</script>
+
+<!-- fresh-vegetables -->
+		<div class="fresh-vegetables">
+		<div class="container">
+			<h3>What Would You Like To Do?</h3>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+			.button {
+			  border-radius: 4px;
+			  background-color: #f4511e;
+			  border: none;
+			  color: #FFFFFF;
+			  text-align: center;
+			  font-size: 28px;
+			  padding: 20px;
+			  width: 200px;
+			  transition: all 0.5s;
+			  cursor: pointer;
+			  margin: 5px;
+			}
+
+			.button span {
+			  cursor: pointer;
+			  display: inline-block;
+			  position: relative;
+			  transition: 0.5s;
+			}
+
+			.button span:after {
+			  content: '\00bb';
+			  position: absolute;
+			  opacity: 0;
+			  top: 0;
+			  right: -20px;
+			  transition: 0.5s;
+			}
+
+			.button:hover span {
+			  padding-right: 25px;
+			}
+
+			.button:hover span:after {
+			  opacity: 1;
+			  right: 0;
+			}
+			</style>
+
+			<body>
+
+			<a href="/checkinluggage">
+				<button class="button" onClick="checkin.html" ><span> Check In Your Luggage </span></button>
+			</a>
+			
+
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+			.button {
+				border-radius: 4px;
+				background-color: #f4511e;
+				border: none;
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 28px;
+				padding: 20px;
+				width: 200px;
+				transition: all 0.5s;
+				cursor: pointer;
+				margin: 5px;
+			}
+
+			.button span {
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+			}
+
+			.button span:after {
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+				transition: 0.5s;
+			}
+
+			.button:hover span {
+				padding-right: 25px;
+			}
+
+			.button:hover span:after {
+				opacity: 1;
+				right: 0;
+			}
+			</style>
+
+			<body>
+
+			<a href="/list-luggage">
+				<button class="button" onClick=" luggage-status.html" ><span> Check Luggage Status </span></button>
+			</a>
+			
+
+			
+
+	<a class="weatherwidget-io" href="https://forecast7.com/en/41d88n87d63/chicago/" data-label_1="CHICAGO" data-label_2="WEATHER" data-theme="original" >CHICAGO WEATHER</a>
+	<script>
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+	</script>
+
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 w3_footer_grid">
+
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+
+			</div>
+
+			<div class="clearfix"> </div>
+			<div class="agile_footer_grids">
+				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
+					<!-- <div class="w3_footer_grid_bottom">
+						<img src="images/card.png" alt=" " class="img-responsive" />
+					</div> -->
+				</div>
+
+<!-- //footer -->
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');
+        }
+    );
+});
+</script>
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+<script src="js/minicart.js"></script>
+
+</body>
 </html>
+
+
+<!--check luggage + luggage status -->
+
+
+

@@ -27,7 +27,7 @@ public class Luggage {
     private String status;
 
     @Column(name = "confirmation_number")
-    private int confirmationNumber;
+    private long confirmationNumber;
 
     private String location;
     public void makePayment() {
@@ -36,6 +36,10 @@ public class Luggage {
     public void createLuggageID() {
         long number = (long) Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L;
         this.id = number;
+    }
+    public void generateConfirmationNumber() {
+        long number = (long) Math.floor(Math.random() * 9_000_000_000L) + 1_000_000_000L;
+        this.confirmationNumber = number;
     }
 
     public float calculateAmount(int weight, float price) {
