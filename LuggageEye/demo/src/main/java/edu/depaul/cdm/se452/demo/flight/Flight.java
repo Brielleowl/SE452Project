@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import edu.depaul.cdm.se452.demo.luggage.Luggage;
 import edu.depaul.cdm.se452.demo.passenger.Passenger;
@@ -20,6 +21,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "FLIGHT")
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

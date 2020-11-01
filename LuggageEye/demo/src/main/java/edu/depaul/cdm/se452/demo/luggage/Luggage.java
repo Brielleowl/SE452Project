@@ -1,24 +1,32 @@
 package edu.depaul.cdm.se452.demo.luggage;
 
 import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name="LUGGAGE")
+@Table(name = "LUGGAGE")
+// @AllArgsConstructor
+// @NoArgsConstructor
 public class Luggage {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
 
+    @Column(name = "passenger_id")
     private int passengerID;
 
     private double weight;
 
     private String status;
 
+    @Column(name = "confirmation_number")
     private int confirmationNumber;
 
     public void makePayment() {

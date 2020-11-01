@@ -11,14 +11,15 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table
+@Table(name = "AIRLINES")
 
 public class Airline {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotBlank
-    @Column(name = "AirlineID")
+    // @NotBlank
+    @Column(name = "airline_id")
     private int airlineID;
+    @Column(name = "airline_name")
     private String airlinename;
     // @OneToMany(mappedBy = "flightID")
     private List<Flight> flightList;

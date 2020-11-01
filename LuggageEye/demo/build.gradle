@@ -23,7 +23,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	// implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+		implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -37,6 +39,10 @@ dependencies {
 
 }
 
+// jar {
+//     baseName = 'bootstrap-in-action'
+//     version = '1.0.0'
+// }
 test {
 	useJUnitPlatform()
 }

@@ -1,11 +1,11 @@
-DROP TABLE IF EXISTS luggage;
+-- DROP TABLE IF EXISTS luggage;
 DROP TABLE IF EXISTS Airlines;
-Drop TABLE IF EXISTS FLIGHT;
-DROP TABLE IF EXISTS ticket;
+-- Drop TABLE IF EXISTS FLIGHT;
+-- DROP TABLE IF EXISTS ticket;
 DROP TABLE IF EXISTS passenger;
-DROP TABLE IF EXISTS Schedule;
-DROP TABLE IF EXISTS Crew;
-DROP TABLE IF EXISTS Airport;
+-- DROP TABLE IF EXISTS Schedule;
+-- DROP TABLE IF EXISTS Crew;
+-- DROP TABLE IF EXISTS Airport;
 CREATE SEQUENCE hibernate_sequence START WITH 100 INCREMENT BY 1;
 
 CREATE TABLE passenger (
@@ -25,17 +25,18 @@ CREATE TABLE luggage (
 
 
 
-CREATE TABLE Airlines (
-    AirlineID int,
-    AirlineName VARCHAR(50),
-    PRIMARY KEY (AirlineID)
+CREATE TABLE airlines (
+    airline_id int,
+    airline_name VARCHAR(50),
+    PRIMARY KEY (airline_id)
 );
-CREATE TABLE Flight (
-    FlightId int,
-    FlightNum int,
-    AirlineID int,
-    PlaneModel VARCHAR(50)
-    PRIMARY KEY (FlightId)
+
+CREATE TABLE flight (
+    flight_id int,
+    flight_num int,
+    airline_iD int,
+    plane_model VARCHAR(50),
+    PRIMARY KEY (flight_id)
 );
 
 CREATE TABLE Ticket (
@@ -51,11 +52,10 @@ CREATE TABLE Ticket (
 
 CREATE TABLE Schedule(
     flightID int,
-    arrivalCity VARCHAR,
-    destinationCity VARCHAR,
+    arrivalCity VARCHAR(50),
+    destinationCity VARCHAR(50),
     arrivalDate DATETIME,
-    destinationDate DATETIME,
-    
+    destinationDate DATETIME
 
 );
 

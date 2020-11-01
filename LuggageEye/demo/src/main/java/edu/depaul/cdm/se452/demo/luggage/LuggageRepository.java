@@ -1,8 +1,10 @@
-// package edu.depaul.cdm.se452.demo.luggage;
+package edu.depaul.cdm.se452.demo.luggage;
 
-// import org.springframework.data.jpa.repository.JpaRepository;
-// import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
-// public interface LuggageRepository extends JpaRepository<Luggage, Long>  {
-       
-// }
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+@Repository
+public interface LuggageRepository extends JpaRepository<Luggage, Long>  {
+    List<Luggage> findById(long id);
+}
