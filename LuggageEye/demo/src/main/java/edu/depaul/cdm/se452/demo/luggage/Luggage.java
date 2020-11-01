@@ -29,6 +29,7 @@ public class Luggage {
     @Column(name = "confirmation_number")
     private int confirmationNumber;
 
+    private String location;
     public void makePayment() {
     }
 
