@@ -1,11 +1,11 @@
--- DROP TABLE IF EXISTS luggage;
+DROP TABLE IF EXISTS luggage;
 DROP TABLE IF EXISTS Airlines;
--- Drop TABLE IF EXISTS FLIGHT;
--- DROP TABLE IF EXISTS ticket;
+Drop TABLE IF EXISTS FLIGHT;
+DROP TABLE IF EXISTS ticket;
 DROP TABLE IF EXISTS passenger;
--- DROP TABLE IF EXISTS Schedule;
--- DROP TABLE IF EXISTS Crew;
--- DROP TABLE IF EXISTS Airport;
+DROP TABLE IF EXISTS Schedule;
+DROP TABLE IF EXISTS Crew;
+DROP TABLE IF EXISTS Airport;
 CREATE SEQUENCE hibernate_sequence START WITH 100 INCREMENT BY 1;
 
 CREATE TABLE passenger (
@@ -15,12 +15,13 @@ CREATE TABLE passenger (
 );
 
 CREATE TABLE luggage (
-    id int,
-    passenger_id int,
-    weight int,
+    id bigint,
+    passenger_id bigint,
+    weight DECIMAL,
     status VARCHAR(10),
-    confirmation_number int,
-    PRIMARY KEY (ID)
+    location VARCHAR(20),
+    confirmation_number bigint,
+    PRIMARY KEY (id)
 );
 
 

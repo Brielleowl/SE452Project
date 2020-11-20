@@ -5,9 +5,9 @@ INSERT INTO passenger(id, name) VALUES
 
 
 
-INSERT INTO luggage(id, passenger_id, weight, status, confirmation_number) VALUES
-            (123, 12345, 10, 'In Transit', 12345),
-            (012,354,20,'in transit',3652);
+INSERT INTO luggage(id, passenger_id, weight, status, location, confirmation_number) VALUES
+            (12389, 12345, 10.0, 'In Transit', 'Austin', 12345),
+            (01201,35464,20.0,'In Transit', 'Chicago', 365235);
 
 INSERT INTO airlines(airline_id, airline_name) VALUES
             (123456,'United'),
@@ -25,7 +25,8 @@ INSERT INTO Crew(CrewID, Name) VALUES
 (34534, 'Elena');
 
 INSERT INTO Airport(AirportID, City ,State ,CrewID) VALUES
-(3412, 'Chicago', 'Illinois', 34532);
+(3412, 'Chicago', 'Illinois', 34532),
+(5461, 'NewYork', 'NY', 89655);
 
 
             

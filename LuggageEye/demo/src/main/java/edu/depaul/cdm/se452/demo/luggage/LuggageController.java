@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,13 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("list-luggage")
+
 public class LuggageController {
 
     @Autowired
     private ILuggageService luggageService;
 
-    @GetMapping
+    @GetMapping("list-luggage")
     public ModelAndView showLuggages() {
         ModelAndView mv = new ModelAndView("list-luggage");
         mv.addObject("luggages", luggageService.findAll());
@@ -45,29 +46,13 @@ public class LuggageController {
         return "confirmation";
     }
    
-    @GetMapping("/luggageStatus")
-    public String showLuggageStatus(long luggageId, Model model) {
-        Luggage luggage = luggageService.findById(luggageId);
-        model.addAttribute("luggage", luggage);
-        return "luggage-status";
-    }
-    @GetMapping("/addLuggage")
-    public String addLuggage(Luggage luggage){
-        return "add-luggage";
-    }
-    @PostMapping("/addLuggage")
-    public String addLuggage(@Valid Luggage luggage, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "add-luggage";
-        }
-        luggageService.update(luggage);
-        model.addAttribute("luggage", luggageService.findAll());
-        return "redirect:/home";
-    }
+
+
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") long luggageId, Model model) {
         luggageService.deleteById(luggageId);
         return "redirect:/list-luggage";
+        //return "list-luggage";
     }
 
 

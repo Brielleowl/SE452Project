@@ -17,7 +17,7 @@ public class LuggageService implements ILuggageService{
     }
     @Override
     public Luggage findById(long id){
-        return repository.findById(id).get(0);
+        return repository.findById(id);
 
     }
     @Override

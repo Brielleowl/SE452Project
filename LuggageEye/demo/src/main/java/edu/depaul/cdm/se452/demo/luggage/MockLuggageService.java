@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
 @Service
 @ConditionalOnProperty(name = "datasource", havingValue = "mock")
 public class MockLuggageService implements ILuggageService{
-    private static List<Luggage> LUGGAGES = new ArrayList<>();
+    private static List<Luggage> LUGGAGES = new ArrayList<Luggage>();
     static Random random = new Random();
     static{
-        Stream.of("Chicago", "NewYork","San Francisco", "Los Angeles","Boston")
+        Stream.of("Chicago(Mock)", "NewYork(Mock)","San Francisco(Mock)", "Los Angeles(Mock)","Boston(Mock)")
             .forEach(location ->{
                 Luggage luggage = new Luggage();
                 luggage.setLocation(location);
@@ -24,8 +24,11 @@ public class MockLuggageService implements ILuggageService{
                 luggage.setStatus("In transit");
                 luggage.setWeight(random.nextInt(100));
                 luggage.setConfirmationNumber(random.nextInt());
+                LUGGAGES.add(luggage);
                 
             });
+
+            
     }
     @Override
     public List<Luggage> findAll() {
